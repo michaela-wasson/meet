@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "3.9.0",
+  "description": "serverless ",
+  "main": "handler.js",
+  "scripts": {
+    "test": "y"
+  },
+  "repository": {
+    "type": "git",
+    "url": "meet"
+  },
+  "keywords": [
+    "serverless",
+    "meet"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "googleapis": "^110.0.0"
+  }
+}
