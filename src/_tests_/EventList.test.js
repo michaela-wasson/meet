@@ -15,9 +15,8 @@ describe('<EventList /> component', () => {
  });
 
  test('renders correct number of events', () => {
-   EventListComponent.rerender(<EventList events={
-     [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }]
-   } />);
+   EventListComponent.rerender(<EventList events={allEvents} />);
+   expect(EventListComponent.getAllByRole("listitem")).toHaveLength(allEvents.length);
    expect(EventListComponent.getAllByRole("listitem")).toHaveLength(4);
  });
 });
