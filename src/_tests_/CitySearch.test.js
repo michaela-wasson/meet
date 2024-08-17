@@ -3,12 +3,15 @@
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import CitySearch from '../components/CitySearch';
+import { extractLocations, getEvents} from '../api';
 
 describe('<CitySearch /> component', () => {
   let CitySearchComponent;
+
   beforeEach(() => {
     CitySearchComponent = render(<CitySearch />);
   });
+
   test('renders text input', () => {
     const cityTextBox = CitySearchComponent.queryByRole('textbox');
     expect(cityTextBox).toBeInTheDocument();
@@ -27,7 +30,7 @@ describe('<CitySearch /> component', () => {
     const suggestionList = CitySearchComponent.queryByRole('list');
     expect(suggestionList).toBeInTheDocument();
     expect(suggestionList).toHaveClass('suggestions');
-  });
+  });  
 
   test('updates list of suggestions correctly when user types in city textbox', async () => {
     const user = userEvent.setup();
