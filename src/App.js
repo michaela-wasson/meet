@@ -1,6 +1,7 @@
 // src/App.js
 import { useEffect, useState } from 'react';
 import EventList from './components/EventList';
+import NumberofEvents from './components/NumberofEvents';
 import CitySearch from './components/CitySearch';
 import './App.css';
 
@@ -13,6 +14,7 @@ const App = () => {
       allLocations = {allLocations}
         />
       <EventList />
+      <NumberofEvents/>
     </div>
   );
 }

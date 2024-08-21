@@ -24,9 +24,7 @@ const CitySearch = ({allLocations}) => {
         setShowSuggestions(false); 
       };
 
-    // useEffect(() => {
-    //   setSuggestions(allLocations);
-    //   }, [`${allLocations}`]);
+
 
   return (
     <div id="city-search">
